@@ -1,0 +1,35 @@
+name:                lens-monad
+version:             0.1.0.0
+synopsis:            Monadic monadic lenses
+description:
+  This package connects lenses and monads in two ways:
+  .
+  * Monadic lenses can perform effects while getting and setting values;
+  .
+  * Lenses are instances of @Monad@.
+
+homepage:            https://github.com/Lysxia/lens-monad#readme
+license:             MIT
+license-file:        LICENSE
+author:              Li-yao Xia
+maintainer:          lysxia@gmail.com
+category:            Data, Lenses
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:
+    Control.Monad.Lens
+  build-depends:
+    base >= 4.9 && < 5,
+    lens,
+    mtl,
+    profunctors
+  default-language:    Haskell2010
+  ghc-options: -Wall -Wno-name-shadowing
+
+source-repository head
+  type:     git
+  location: https://github.com/Lysxia/lens-monad
