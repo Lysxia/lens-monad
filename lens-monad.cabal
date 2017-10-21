@@ -22,6 +22,7 @@ library
   hs-source-dirs:      src
   exposed-modules:
     Control.Monad.Lens
+    Control.Monad.Lens.Simple
   build-depends:
     base >= 4.9 && < 5,
     lens,
