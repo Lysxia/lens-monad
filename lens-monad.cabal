@@ -31,6 +31,23 @@ library
   default-language:    Haskell2010
   ghc-options: -Wall -Wno-name-shadowing
 
+test-suite spine-lens-example
+  hs-source-dirs:      examples, test
+  main-is:             spine-lens-example.hs
+  other-modules:
+    Spine
+  build-depends:
+    hedgehog,
+    hedgehog-quickcheck,
+    lens,
+    lens-monad,
+    profunctors,
+    QuickCheck,
+    base
+  type:                exitcode-stdio-1.0
+  default-language:    Haskell2010
+  ghc-options: -Wall -Wno-name-shadowing
+
 source-repository head
   type:     git
   location: https://github.com/Lysxia/lens-monad

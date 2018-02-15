@@ -1,13 +1,17 @@
+{-# LANGUAGE DeriveGeneric #-}
+
 module Spine where
 
 import Control.Lens
-import Control.Monad.Lens.Simple
 import Data.Profunctor
+import GHC.Generics
+
+import Control.Monad.Lens.Simple
 
 data Tree
   = Leaf
   | Node Tree Int Tree
-  deriving Show
+  deriving (Eq, Ord, Show, Generic)
 
 rootL :: Lens' Tree (Maybe Int)
 rootL = lens getter setter
