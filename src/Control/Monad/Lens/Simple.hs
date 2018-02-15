@@ -47,8 +47,8 @@ toL l = L getter putter
   where
     getter = Lens.view l
     putter s x =
-      let (v, s') = (l Lens.%%~ \y -> (y, x)) s
-      in (s', \s' -> Lens.view l s' == v, v)
+      let s' = Lens.set l x s
+      in (s', \s' -> Lens.view l s' == x, x)
 
 fst3 :: (a, b, c) -> a
 fst3 (a, _, _) = a
